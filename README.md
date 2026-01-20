@@ -17,7 +17,7 @@ The network consists of:
 The repository includes the following files:
 
 ### 1. Semantic Types
-*   **Files:** `UMLS Semantic Network - type.csv`, `UMLS Semantic Network - type.parquet`
+*   **Files:** `UMLS Semantic Network - type.csv`, `umls_semantic_network_type.parquet`
 *   **Description:** Defines the nodes in the Semantic Network.
 
 | Column | Description |
@@ -28,7 +28,7 @@ The repository includes the following files:
 | `note` | Additional usage notes or guidelines for assigning this type. |
 
 ### 2. Semantic Relations
-*   **Files:** `UMLS Semantic Network - relation.csv`, `UMLS Semantic Network - relation.parquet`
+*   **Files:** `UMLS Semantic Network - relation.csv`, `umls_semantic_network_relation.parquet`
 *   **Description:** Defines the edges/relationships available in the Semantic Network.
 
 | Column | Description |
@@ -48,7 +48,7 @@ You can easily load these datasets using Python and Pandas. The Parquet format i
 import pandas as pd
 
 # Load Semantic Types (Parquet)
-types_df = pd.read_parquet('UMLS Semantic Network - type.parquet')
+types_df = pd.read_parquet('umls_semantic_network_type.parquet')
 
 # View the definition of "Disease or Syndrome" (T047)
 disease_type = types_df[types_df['identifier'] == 'T047']
